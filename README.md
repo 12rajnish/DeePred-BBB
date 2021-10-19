@@ -12,7 +12,7 @@ A. Description of files in DeePred-BBB.zip:
 B. Execution Steps:
 Step 1: Install Anaconda3-5.2 or above.
 
-Step 2: Install or upgrade following libraries (python, numpy, pandas, keras).
+Step 2: Install or upgrade following libraries (python, numpy, pandas, keras, tensorflow).
 
 Step 3: Download and extract the DeePred-BBB.zip file. 
 
