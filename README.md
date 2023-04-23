@@ -32,6 +32,7 @@ file (e.g. ``smiles.smi``). Remember to give a name or ID to each structure.
 2. Edit the `smiles.smi` file or create any number of files with a `*.smi` extension in the root directory. Add each structure on newlines in the file, in the format `<structure in SMILES format> <label for structure>`
 
 3. Run the command `make run`. This will both output the model's predictions to stdout and put it into an output file.
+  - To run with another working directory, use `make run DIR=<path_to_directory>` 
 
 ### Other Makefile commands
 

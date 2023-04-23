@@ -1,4 +1,5 @@
 SHELL := bash
+DIR := ./
 
 .PHONY: venv install reinit run
 .SILENT: venv reinit
@@ -21,4 +22,4 @@ reinit:
 
 run: venv install reinit
 	source .venv/bin/activate
-	python3 DeePred-BBB_Script.py
+	python3 DeePred-BBB_Script.py $(DIR)
