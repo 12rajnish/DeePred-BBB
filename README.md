@@ -19,14 +19,34 @@ The files contained in this repository are as follows:
 * Pandas
 * Keras
 * Tensorflow
+* Scikit-Learn
 
 ## Usage
 
 In order to run BBB permeability predictions with **DeePred-BBB**, save input structures as SMILES in a single 
 file (e.g. ``smiles.smi``). Remember to give a name or ID to each structure.
  
+### Running commands using the makefile
+1. Clone / download this repository and change directories into it
+
+2. Edit the `smiles.smi` file or create any number of files with a `*.smi` extension in the root directory. Add each structure on newlines in the file, in the format `<structure in SMILES format> <label for structure>`
+
+3. Run the command `make run`. This will both output the model's predictions to stdout and put it into an output file.
+
+### Other Makefile commands
+
+- `make venv`
+  - Create the venv, if not already existent
+- `make install`
+  - Installs all python requirements inside a venv environment
+  - Note: the `run` command will also use this venv. If running commands manually (not using the makefile), use `source .venv/bin/activate` to activate the venv, and `deactivate` to deactivate it
+- `make reinit`
+  - Recreates the original demo structure file, if no other `*.smi` files exist
+
+### Running commands manually
+
 1. Download this repository and ensure that all the files are present in the same folder when running the script.
-2. Run ``DeePred-BBB_Scrip.py``. 
+2. Run ``DeePred-BBB_Script.py``. 
   ```bash
   python DeePred-BBB_Script.py <folder>
   ```
