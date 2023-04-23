@@ -1,5 +1,8 @@
 SHELL := bash
 
+.PHONY: venv install reinit run
+.SILENT: venv reinit
+
 venv:
 	if [ ! -d ".venv" ]; \
 	then \
@@ -19,6 +22,3 @@ reinit:
 run: venv install reinit
 	source .venv/bin/activate
 	python3 DeePred-BBB_Script.py
-
-.PHONY: venv install reinit run
-.SILENT: venv reinit
