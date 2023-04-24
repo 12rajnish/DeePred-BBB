@@ -41,7 +41,7 @@ def bbb(input_bbb: pd.DataFrame) -> np.ndarray:
     # Transform user data to numpy to avoid conflict with names
     bbb_user_input = scaler.transform(input_bbb.to_numpy())
     # Load model
-    loaded_model = load_model(os.path.join(path, "DeePredmodel.h5")) 
+    loaded_model = load_model(os.path.join(path, "DeePredmodel.h5"), compile=False) 
     print("Model loaded")
     # Get predictions for user input
     prediction = loaded_model.predict(bbb_user_input).round()

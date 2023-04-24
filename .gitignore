@@ -1,0 +1,7 @@
+# venv
+*venv/**
+
+# Input and output files
+**/DeePred-BBB_predictions.csv
+**/PaDEL_features.csv
+**/*.smi
